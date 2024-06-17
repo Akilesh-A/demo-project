@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+      function theGround(obj) {
+        console.log(obj.name.length>=obj.category.length);
+        if(   obj.name.length>=obj.category.length){
+            return obj.name
+         
+        }else{
+            return obj.category
+        }
+      }
+      theGround({"name":"quartz","category":"gamma"})
+      theGround({ name: "stone", category: "alpha" });
+      theGround({"name":"water","category":"delta"})
+    </script> -->
+
+    <!-- <script>
+      function easyLoop() {
+        let num=''
+        for(i=0;i<=99;i++){
+            if(i%7==0){
+                num+=i
+                console.log(num);
+
+            }
+        }
+
+      }
+      easyLoop();
+    </script> -->
+
+    <!-- <script>
+      function strangeWord(word) {
+        let wo = "";
+        for (let i = 0; i < word.length; i++) {
+          if (i % 2 == 0) {
+           console.log(word[i]);
+           wo+=word[i]
+          }
+        }
+       
+        return wo;
+      }
+      strangeWord('JavaScript')
+    </script> -->
+
+    <!-- <script>
+    function firstJSON(key, value) {
+    const obj = {};
+   
+    obj[key] = value;
+    console.log(obj[0]);
+    return JSON.stringify(obj);
+}
+      firstJSON('name', 'JSCodebox')
+    </script> -->
+
+    <!-- <script>
+      function camelCase(n) {
+        let words = n.split("");
+        console.log(words);
+
+        let camelCasedString = "";
+        for (let i = 0; i < words.length; i++) {
+          if (i == 0) {
+            camelCasedString += words[i].toLowerCase();
+          } else if (words[i] == " ") {
+            camelCasedString += words[i + 1].toUpperCase();
+            i++;
+          } else {
+            camelCasedString += words[i];
+          }
+        }
+        console.log(camelCasedString);
+      }
+      camelCase("CamelCase");
+      // camelCase("Is not found");
+    </script> -->
+    <!-- <script>
+      async function a() {
+        return "hello";
+      }
+      let b = a();
+      console.log(b);
+    </script> -->
+
+    <!-- <script>
+      function repeater(inputString, n) {
+        // Iterate from the given number n down to 0
+        for (let i = 0; i, n; i++) {
+          // Extract the substring from the start of the string to index i (exclusive)
+          const section = inputString.substring(0, i);
+
+          // Print the section
+          console.log(section);
+        }
+      }
+
+      // Test the function with a sample string and number
+      repeater("JSCodebox", 6);
+    </script> -->
+    <!-- 
+    <script>
+      // function getURLParams(url) {
+      //     console.log(url);
+      //     let newurl=new URL(url).searchParams
+
+      //     let arr=[]
+      //     for(let value of newurl.values()){
+      //       arr.push(value);
+      //     }
+      //     return arr
+      // }
+      // getURLParams("https://jscodebox.com/test.xml?id=3&value=file");
+
+
+      function getURLParams(url){
+        // console.log(url)
+        console.log()
+        let arr=new URL(url).searchParams;
+        for(let value of arr.values()){
+          console.log(value);
+        }
+
+      }
+      getURLParams("https://jscodebox.com/test.xml?id=3&value=file")
+    </script> -->
+    <!-- <script>
+   function keyboardError(correct, wrong) {
+  // console.log(correct.length);
+  // console.log(wrong.length);
+  let minimumValue= Math.min(correct.length,wrong.length);
+  let arr=new Set()
+  for(let i=0;i<minimumValue;i++){
+    if(correct[i]!==wrong[i]){
+      arr.add(correct[i])
+
+    }
+   return Array.from(arr)
+ 
+  }
+
+}
+keyboardError('foobar', 'fiibnr')
+    </script> -->
+    <!-- Given is a JSON string json. Convert this string into an object and return the parameter title of the created object. -->
+    <!-- <script>
+
+      function json2Object(json) {
+        console.log(JSON.parse(json).title)
+
+      }
+      json2Object('{"title": "JSCodebox", "category": "2"}')
+    </script> -->
+
+    <!-- <script>
+      function littleChild(child1, child2) {
+        const isChild1InRange = child1 >= 0 && child1 <= 14;
+
+        const isChild2InRange = child2 >= 0 && child2 <= 14;
+        console.log(isChild1InRange)
+        console.log(isChild2InRange)
+        // if (isChild1InRange !== isChild2InRange) {
+        //   return true;
+        // }
+        // return false;
+      }
+      littleChild(-3, 11)
+    
+     
+    </script> -->
+
+    <!-- <script>
+      function gHappy(string) {
+        // console.log(string);
+        for (let i = 0; i < string.length; i++) {
+          if(string[i]==='g' && string[i+1]==='g'){
+          
+            // console.log(i>0 && string[i-1]==='g');
+            // console.log(i>0 && string[i+1]==='g');
+            console.log("true")
+          
+          
+          }
+        
+          
+        }
+      }
+      gHappy('xyggxyz')
+
+    </script> -->
+
+    <!-- <script>
+    function longest(string) {
+  // console.log(string);
+  let num = 0;
+  let max = 1;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === string[i + 1]) {
+      max++;
+    } else {
+      if (max > num) {
+        num = max;
+        max = 1;
+      }
+    }
+  }
+  console.log(num);
+}
+
+// Example usage
+longest('aaBBcDDDDDDeeFFFFFFFFg'); // 8
+    
+
+
+    </script> -->
+
+    <!-- <script>
+      function uniquePalindromeSubstrings(str) {
+        const result = new Set();
+
+        // Helper function to check if a string is palindrome
+        function isPalindrome(sub) {
+          return sub === sub.split("").reverse().join("");
+        }
+
+        // Generate all possible substrings and check for palindromes
+        for (let i = 0; i < str.length; i++) {
+          for (let j = i + 1; j <= str.length; j++) {
+            const substr = str.substring(i, j);
+            if (isPalindrome(substr)) {
+              result.add(substr);
+            }
+          }
+        }
+
+        // Convert set to array and sort it
+        return Array.from(result).sort();
+      }
+
+      // Test the function
+      console.log(uniquePalindromeSubstrings("abcbabcba"));
+    </script>  
+  -->
+    <!-- <script>
+      function uniquePalindromeSubstrings(str) {
+        // console.log(str);
+        let result = new Set();
+        function topalindrome(a) {
+          // console.log(a + ",,,,," + a.split("").reverse().join(""));
+          // console.log(a.split("").reverse().join(''));
+         return a == a.split("").reverse().join("");
+        }
+
+        for (let i = 0; i < str.length; i++) {
+          for (let j = i + 1; j <= str.length; j++) {
+            let strings = str.substring(i, j);
+            if (topalindrome(strings)) {
+              result.add(strings);
+            }
+          }
+        }
+        console.log(Array.from(result));
+      }
+
+      uniquePalindromeSubstrings("racecar");
+    </script> -->
+
+    <!-- <script>
+      function arrayManipulation(n, queries) {
+        // Initialize an array of size n with all elements set to 0
+        let arr = new Array(n).fill(0);
+
+        // Iterate through each query
+        for (let i = 0; i < queries.length; i++) {
+          let [a, b, k] = queries[i];
+          // Update the subarray from index a to index b by adding k
+          for (let j = a - 1; j < b; j++) {
+            arr[j] += k;
+          }
+        }
+
+        // Find the maximum value in the array
+        let max = Math.max(...arr);
+        return max;
+      }
+
+      // Test cases
+      console.log(
+        arrayManipulation(5, [
+          [1, 2, 100],
+          [2, 5, 100],
+          [3, 4, 100],
+        ])
+      ); // Output: 200
+    </script> -->
+
+    <!-- <script>
+      function timeConvert(minutes) {
+        let hours=Math.floor(minutes/60)
+        let min=minutes%60;
+
+       let exthrs= hours.toString().padStart(2,'0');
+       let extmin=min.toString().padStart(2,'0');
+
+       console.log(exthrs,extmin);
+        
+       
+
+      }
+      timeConvert(1000)
+    </script> -->
+
+    <!-- <script>
+      function maxSumSubsequence(arr) {
+        let maxsum=arr[0];
+        let num=arr[0];
+        for(let i=1;i<arr.length;i++){
+          num=Math.max(arr[i],num+arr[i])
+          maxsum=Math.max(maxsum,num)
+    
+         
+        }
+       return maxsum;
+      }
+      maxSumSubsequence([1, 2, 3, -2, 5]);
+    </script> -->
+
+    <script>
+      function outsideIn(outside, inside) {
+        console.log(outside,inside);
+        inside.filter((num)=>{
+          return outside.includes(num)
+
+        })
+
+      }
+      outsideIn([0,6,3,7,2], [2,6,3,0,7])
+    </script>
+  </body>
+</html>
